@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "learnrxjs",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "rxjs": "^5.2.0"
+  },
   "devDependencies": {
     "@types/node": "^7.0.6"
   },
