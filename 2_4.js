@@ -17,7 +17,7 @@ const progressBar$ = Rx.Observable.create(observer => {
      else {
        observer.complete();
      }
-   };
+   }
    setTimeout(progress, OFFSET);
 });
 
