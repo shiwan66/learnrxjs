@@ -10,4 +10,8 @@ Rx.Observable.from([
     'jumps over the lazy dog'])
     .flatMap(str => str.split(' '))
     .filter(str => str.includes('o'))
+    .reduce((acc, str) => {
+        acc += str;
+        return acc;
+    }, "")
     .subscribe(x => console.log(x));
