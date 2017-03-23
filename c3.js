@@ -28,5 +28,4 @@ let candidates = [
 Rx.Observable.from(candidates)
     .pluck('testing', 'nest')
     .take(2)
-    .do(name => console.log(name))
-    .subscribe();
+    .subscribe(x => console.log(x));
