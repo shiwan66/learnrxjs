@@ -4,6 +4,7 @@
   "description": "learnrxjs",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.15.3",
     "rxjs": "^5.2.0"
   },
   "devDependencies": {
