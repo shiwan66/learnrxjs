@@ -6,7 +6,7 @@ const url = 'https://api.github.com/users/JakeWharton/starred';
 Rx.Observable.fromPromise(axios.get(url))
     .map(response => response.data)
     .concatAll()
-    .take(1)
+    .take(2)
     .map(data => {
         return {
             avatar: data.owner.avatar_url,
@@ -15,7 +15,7 @@ Rx.Observable.fromPromise(axios.get(url))
             login: data.owner.login,
             name: data.name,
             stars: data.stargazers_count,
-            url: data.url
+            url: data.html_url
         }
     })
     .subscribe(
