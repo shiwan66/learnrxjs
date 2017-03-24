@@ -3,8 +3,7 @@ const axios = require('axios');
 
 const url = 'https://api.github.com/users/JakeWharton/starred';
 
-Rx.Observable.of(url)
-    .flatMap(requestUrl => Rx.Observable.fromPromise(axios.get(requestUrl)))
+Rx.Observable.fromPromise(axios.get(url))
     .map(response => response.data)
     .concatAll()
     .take(1)
