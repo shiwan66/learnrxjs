@@ -19,4 +19,7 @@ Rx.Observable.of(url)
             url: data.url
         }
     })
-    .subscribe(response => console.log(response));
+    .subscribe(
+        response => console.log(response),
+        error => console.log("Error occurred: ", error)
+    );
