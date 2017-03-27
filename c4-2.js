@@ -32,6 +32,12 @@ window.onload = function () {
                 appendResults(result, results);
             }
         });
+
+    Rx.Observable.fromEvent(document, 'mousemove')
+        .throttleTime(2000)
+        .subscribe(event => {
+            console.log(`Mouse at: ${event.clientX} and ${event.clientY}`);
+        });
 };
 
 function clearResults(container) {
