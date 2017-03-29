@@ -12,5 +12,5 @@ const c2$ = Rx.Observable.fromEvent(click2, 'click')
         y: event.pageY
     }));
 
-const combined = Rx.Observable.merge(c1$, c2$)
+Rx.Observable.concat(c1$.take(5), c2$)
     .subscribe(e => console.log(e));
